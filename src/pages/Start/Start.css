@@ -1,0 +1,145 @@
+.App-header {
+    background-color: #1E1E1E;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .typewriter h3 {
+    color: #F8E7C9;
+    font-family: 'Inconsolata', monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    line-height: 1.5;
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+  
+      &:nth-child(1) {
+        animation: 
+          typing 1.5s steps(30, end),
+          blink-caret 500ms step-end infinite;
+        animation-delay: 0s;
+      }
+    
+      &:nth-child(2) {
+        visibility: hidden;
+        animation: 
+          typing 1.8s steps(30, end),
+          blink-caret 500ms step-end infinite;
+        animation-delay: 1.8s;
+        animation-fill-mode: forwards;
+      }
+  
+      &:nth-child(3) {
+        visibility: hidden;
+        animation: 
+          typing 1.8s steps(30, end),
+          blink-caret 500ms step-end infinite;
+        animation-delay: 4.8s;
+        animation-fill-mode: forwards;
+      }
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100%; visibility: visible; }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+  
+  .start-button {
+      background: none;
+      border: none;
+      position: relative;
+      width: 8.75rem;
+      height: 3rem;
+    margin-top: 48px;
+    padding: 16px 24px;
+    animation: fadeIn 3s;
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+      &:hover {
+          .content {
+              opacity: 0;
+          }
+          .left {
+              border-top-left-radius: 1.5rem;
+              border-bottom-left-radius: 1.5rem;
+              border-top-right-radius: 0.5rem;
+              transform: rotate(45deg);
+              top: 0.75rem;
+              left: 0.5rem;
+          }
+          .right {
+              border-top-right-radius: 1.5rem;
+              border-bottom-right-radius: 1.5rem;
+              border-top-left-radius: 0.5rem;
+              transform: rotate(-45deg);
+              top: 0.75rem;
+              right: 0.5rem;
+          }
+      }
+  }
+  
+  
+  @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+  }
+  
+  .left,
+  .right,
+  .content {
+      transition: 0.25s ease-in-out all;
+      cursor: pointer;
+  }
+  
+  .left {
+      background: #E9207B;
+      position: absolute;
+      left: 0;
+      right: 50%;
+      top: 0;
+      bottom: 0;
+      z-index: 50;
+      transform-origin: bottom right;
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+  }
+  
+  .right {
+      background: #E9207B;
+      position: absolute;
+      right: 0;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      z-index: 50;
+      transform-origin: bottom left;
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+  }
+  
+  .content {
+      color: #e9e4f0;
+      position: absolute;
+      z-index: 100;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bolder;
+  }

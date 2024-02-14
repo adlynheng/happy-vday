@@ -1,21 +1,14 @@
-import './App.css';
-import { useState } from "react"
+import "./App.css";
+import { useState } from "react";
+import Start from "./pages/Start";
+import Main from "./pages/Main";
 
 function App() {
+  const [nextPage, setNextPage] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <div class="typewriter">
-          <h3>Hello Sean</h3>
-          <h3>This vday gift is from your GF</h3>
-          <h3>Me, Adlyn 😗</h3>
-          <button> 
-            <div class="left"></div>
-            <div class="right"></div>
-            <div class="content"><span>Click to continue</span></div>
-          </button>
-        </div>
-      </header>
+      {nextPage ? <Main /> : <Start setNextPage={setNextPage} />}
     </div>
   );
 }
