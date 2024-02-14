@@ -21,7 +21,7 @@ const ThankYou = (props) => {
       </div>
       <div className="filler" />
       <div className="next-block">
-        <a className="thankyou-button" href="/">
+        <a className="thankyou-button" href="/happy-vday">
           <span>Click to go back to start</span>
         </a>
       </div>
