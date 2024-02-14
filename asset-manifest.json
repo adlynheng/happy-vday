@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/happy-vday/static/css/main.2695f12b.css",
+    "main.js": "/happy-vday/static/js/main.c02f8f9b.js",
+    "static/js/592.39ab3100.chunk.js": "/happy-vday/static/js/592.39ab3100.chunk.js",
+    "index.html": "/happy-vday/index.html",
+    "main.2695f12b.css.map": "/happy-vday/static/css/main.2695f12b.css.map",
+    "main.c02f8f9b.js.map": "/happy-vday/static/js/main.c02f8f9b.js.map",
+    "592.39ab3100.chunk.js.map": "/happy-vday/static/js/592.39ab3100.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2695f12b.css",
+    "static/js/main.c02f8f9b.js"
+  ]
+}
